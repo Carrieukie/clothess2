@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="1188.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddcustController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="642.0" prefWidth="208.0" style="-fx-background-color: fe4451;">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="187.0" layoutX="5.0" pickOnBounds="true" style="-fx-opacity: 100%;">
+               <image>
+                  <Image url="@../../../../../Pictures/Saved%20Pictures/ruler.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="8.0" layoutY="127.0" text="Clothes Measurement" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Medium" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="52.5" fill="#252323" layoutX="51.0" layoutY="171.0" startX="-51.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+            <Label layoutX="17.0" layoutY="300.0" text="Dashboard" textFill="#f5f5f5">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="171.0" prefHeight="121.0" prefWidth="198.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Welcome to clothes DB">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="51.0" text="You will record and view Your">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="81.0" text="Customers Measurement">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="addcust" buttonType="RAISED" layoutY="342.0" onAction="#addCust" prefHeight="51.0" prefWidth="208.0" ripplerFill="BLACK" text="Add Customer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="cust" buttonType="RAISED" layoutY="393.0" onAction="#viewCust" prefHeight="51.0" prefWidth="208.0" ripplerFill="BLACK" text="View Customers" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="166.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/add-contact.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="168.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/telescope%20.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="206.0" prefHeight="575.0" prefWidth="582.0">
+         <children>
+            <ScrollPane layoutX="2.0" layoutY="57.0" prefHeight="585.0" prefWidth="977.0">
+               <content>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="991.0" style="-fx-background-color: #ff8c66; -fx-background-radius: 9px;">
+                     <children>
+                        <Text fill="WHITE" layoutX="40.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Details">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Text>
+                        <Line endX="-3.5" endY="331.0" layoutX="545.0" layoutY="200.0" startX="-3.5" startY="-93.0" />
+                        <Text fx:id="dyna" fill="WHITE" layoutX="40.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Measurements">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Text>
+                        <JFXButton fx:id="insert" buttonType="RAISED" layoutX="863.0" layoutY="497.0" onAction="#insert" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50px;" text="Add" textFill="#ff8c66">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                           </font></JFXButton>
+                        <JFXDatePicker fx:id="pick" layoutX="594.0" layoutY="405.0" prefHeight="30.0" prefWidth="155.0" promptText="Date to Pick up" />
+                        <JFXTextArea fx:id="measurements" layoutX="34.0" layoutY="316.0" prefHeight="208.0" prefWidth="464.0" style="-fx-background-color: #ffffff;" />
+                        <JFXTextField fx:id="name" layoutX="79.0" layoutY="78.0" prefHeight="25.0" prefWidth="227.0" promptText="Name">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="phoneno" layoutX="76.0" layoutY="123.0" prefHeight="25.0" prefWidth="227.0" promptText="Phone Number">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></JFXTextField>
+                        <ImageView fx:id="image" fitHeight="166.0" fitWidth="220.0" layoutX="594.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" />
+                        <JFXButton fx:id="fabric" buttonType="RAISED" layoutX="587.0" layoutY="110.0" onAction="#getimage" style="-fx-background-color: #ffffff; -fx-background-radius: 10px;" text="Choose fabric" />
+                        <JFXComboBox fx:id="clothtype" layoutX="74.0" layoutY="214.0" prefHeight="25.0" prefWidth="235.0" promptText="Type of cloth" />
+                        <JFXRadioButton layoutX="79.0" layoutY="176.0" onAction="#setmale" text="Male">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sex" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton layoutX="184.0" layoutY="176.0" onAction="#setfemale" text="Female" toggleGroup="$sex" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets top="8.0" />
+                     </opaqueInsets>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <AnchorPane layoutX="2.0" layoutY="-1.0" prefHeight="60.0" prefWidth="979.0" style="-fx-background-color: #f2f2f2;">
+               <children>
+                  <Text fill="#cd0000" layoutX="364.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Customer">
+                     <font>
+                        <Font name="Edwardian Script ITC" size="43.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
